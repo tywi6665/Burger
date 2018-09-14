@@ -1,0 +1,74 @@
+h1, h4, h5, p {
+    text-align: center;
+}
+
+h1, p {
+    color: #f28c8c;
+}
+
+h4 {
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+
+h5 {
+    margin-top: 5%;
+    margin-bottom: 8%;
+}
+
+.jumbotron {
+    background-color: #304154;
+}
+
+.pic {
+    height: 80%;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.card {
+    margin: 0 auto;
+    margin-bottom: 15%;
+    width: 90%;
+    border-width: 5px;
+}
+
+ul {
+    position: relative;
+}
+
+li {
+    /* display: inline-block; */
+    margin-bottom: 10%;
+}
+
+.eaten {
+    font-weight: bold;
+    color: #60ad2a;
+}
+
+#burgerButton {
+    /* display: inline-block; */
+    position: absolute;
+    right: 0;
+    background-color: #f28c8c;
+}
+
+.addBtn {
+    margin-top: 2%;
+    background-color: #f28c8c;
+}
+
+.footer {
+    position: fixed;
+    bottom: 0;
+    height: 8%;
+    width: 100%;
+    background-color: #304154;
+    text-align: center;
+}
+
+.fab {
+    padding-top: 2%;
+    color: white;
+}

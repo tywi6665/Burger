@@ -12,7 +12,7 @@ app.use(express.static("public"));
 app.use(bodyParser.urlencoded({ extended:false }));
 
 //Parse application
-app.use(boduParser.json());
+app.use(bodyParser.json());
 
 //Set up handlebars
 app.engine("handlebars", expressHandlebars({ defaultLayout: "main"}));
