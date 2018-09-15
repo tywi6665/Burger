@@ -33,5 +33,13 @@ router.post("/burgers", function(req, res) {
     });
 });
 
+router.delete("/burgers/:id", function(req,res) {
+    var condition = "id = " + req.params.id;
+    console.log(condition);
+    burger.delete(condition, function(result) {
+        res.status(200).end();
+    })
+})
+
 //Export routes to server.js
 module.exports = router;

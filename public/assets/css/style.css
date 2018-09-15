@@ -42,9 +42,10 @@ li {
     margin-bottom: 10%;
 }
 
-.eaten {
-    font-weight: bold;
-    color: #60ad2a;
+#trashButton {
+    background-color: #60ad2a;
+    position: absolute;
+    right: 1%;
 }
 
 #burgerButton {

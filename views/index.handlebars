@@ -17,10 +17,9 @@
                         {{#each burgers}}
                             {{#unless this.devoured}}
                                 <li>
-                                    {{this.id}}.
                                     {{this.burger_name}}
                                     <button id="burgerButton" class="burgerButton btn btn-sm" data-id="{{id}}">Devour It!</button>
-                                    </li>
+                                </li>
                             {{/unless}}
                         {{/each}}
                     </ul>
@@ -31,8 +30,8 @@
                         {{#each burgers}}
                             {{#if this.devoured}}
                                 <li class="eaten">
-                                    {{this.id}}.
-                                    {{this.burger_name}} num num
+                                    {{this.burger_name}}
+                                    <button id="trashButton" class="trashButton btn btn-sm" data-id="{{id}}">Dispose of Trash</button>
                                 </li>
                             {{/if}}
                         {{/each}}
@@ -54,12 +53,23 @@
 
 <script>
 
-    $("#burgerButton").on("click", function (event) {
+    $(".burgerButton").on("click", function (event) {
         console.log(this);
         var id = $(this).data("id"); 
         $.ajax("/burgers/" + id, {
             type: "PUT",
             data: id
+        })
+        .then(function() {
+            location.reload();
+        });
+    });
+
+    $(".trashButton").on("click", function (event) {
+        console.log(this);
+        var id = $(this).data("id"); 
+        $.ajax("/burgers/" + id, {
+            type: "DELETE"
         })
         .then(function() {
             location.reload();
